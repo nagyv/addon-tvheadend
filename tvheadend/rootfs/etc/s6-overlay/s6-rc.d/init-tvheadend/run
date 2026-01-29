@@ -12,7 +12,7 @@ check_webgrabplus(){
 webgrabplus_install(){
     if apk update; then
         bashio::log.info '[Webgrab+] APK: Installing required packages.'
-        if apk add --no-cache --virtual .build-deps git mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing; then
+        if apk add --no-cache --virtual .build-deps git mono --repository https://dl-cdn.alpinelinux.org/alpine/edge/testing; then
             bashio::log.info '[Webgrab+] Installing Webgrab+.'
             cd /tmp \
             && wget http://webgrabplus.com/sites/default/files/download/SW/V3.3.0/WebGrabPlus_V3.3_install.tar.gz  \
